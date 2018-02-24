@@ -6,6 +6,6 @@ feature "Can't create post" do
     click_link 'New Post'
     fill_in 'Caption', with: 'Hello'
     click_button 'Create Post'
-    expect(page).to have_content('Halt, you fiend! You need an image to post here!')
+    expect(page).to have_content('You need an image to post!')
   end
 end
