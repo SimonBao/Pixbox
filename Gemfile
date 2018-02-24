@@ -7,6 +7,8 @@ end
 gem 'haml'
 gem 'simple_form'
 gem 'paperclip', '~> 4.2'
+gem 'bootstrap-sass'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
