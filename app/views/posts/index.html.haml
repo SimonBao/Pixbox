@@ -1,2 +1,7 @@
 %h1 Pixbox
+
+-@posts.each do |post|
+  =image_tag post.image.url(:medium)
+  =post.caption
+
 = link_to "New Post", new_post_path
