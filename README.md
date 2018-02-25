@@ -21,4 +21,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Credits
+  * Ben Walks
+  * Project was built by following [devwalks](https://www.devwalks.com/lets-build-instagram-test-driven-with-ruby-on-rails-part-1).
