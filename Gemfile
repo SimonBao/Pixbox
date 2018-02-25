@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 gem 'haml'
 gem 'simple_form'
-gem 'paperclip', '~> 4.2'
+gem 'paperclip', '~> 5.2.0'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 
