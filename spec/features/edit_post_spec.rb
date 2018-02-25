@@ -18,7 +18,7 @@ feature 'Editing a post' do
     click_link 'Edit Post'
     fill_in 'Caption', with: "Woohoo I've transformed!"
     click_button 'Update Post'
-    expect(page).to have_content('Post updated')
+    expect(page).to have_content('Post updated.')
     expect(page).to have_content("Woohoo I've transformed!")
   end
 end
