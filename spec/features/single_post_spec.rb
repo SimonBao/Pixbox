@@ -2,8 +2,10 @@ require 'rails_helper'
 
 feature 'Can view individual posts' do
   background do
-    @post = create(:post)
-    @post2 = create(:post)
+    user = create :user
+    @post = create(:post, user_id: user.id)
+    @post2 = create(:post, user_id: user.id)
+    sign_in_with user
   end
 
   scenario 'Can click and view the first post' do

@@ -11,7 +11,9 @@ require 'rails_helper'
 
 feature 'Editing a post' do
   scenario 'edits post' do
-    post = create(:post, caption: "Edit me!")
+    user = create :user
+    sign_in_with user
+    post = create(:post, caption: "Edit me!", user_id: user.id)
     visit '/'
     find(:xpath, "//a[contains(@href,'posts/1')]").click
     expect(page).to have_content('Edit me!')

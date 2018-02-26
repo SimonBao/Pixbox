@@ -2,6 +2,8 @@ require 'rails_helper.rb'
 
 feature 'Creating posts' do
   scenario 'can create a post' do
+    user = create :user
+    sign_in_with user
     visit '/'
     click_link 'New Post'
     attach_file('Image', "spec/files/images/coffee.jpg")
