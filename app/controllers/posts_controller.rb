@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :like]
+
   def show
-    @post =  Post.find(params[:id])
   end
 
   def index
@@ -24,11 +25,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
       flash[:success] = 'Post updated.'
       redirect_to posts_path
@@ -39,7 +38,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     if @post.destroy
       flash[:success] = "Problem solved! Post deleted."
       redirect_to posts_path
